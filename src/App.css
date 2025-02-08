@@ -1,0 +1,52 @@
+  #root{
+  margin: auto;
+  width: 100%;
+ }
+
+/* Style for the nav container */
+nav {
+  background-color: brown; 
+  padding: 15px; 
+  text-align: center; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; /* Align links vertically */
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+  position:fixed;
+  
+  top: 0;
+  width:100% ;
+  
+  
+}
+
+/* Style the links inside the nav */
+nav a {
+  color: white; /* White text color for the links */
+  text-decoration: none; /* Remove underlines */
+  padding: 10px 20px; /* Padding around each link */
+  margin: 0 15px; /* Horizontal spacing between links */
+  font-size: 16px; /* Set font size */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  display: inline-block; /* Display links in a row */
+  border-radius: 4px; /* Rounded corners for links */
+  margin-left: 80px;
+  
+}
+
+/* Hover effect for links */
+nav a:hover {
+  background-color: #242121; /* Darker background when hovered */
+  color: #ffcc00; /* Change text color on hover */
+}
+
+/* Style the "Cart" link with a dynamic totalQuantity value */
+nav a span {
+  font-weight: bold; /* Make the totalQuantity value bold */
+  font-size: 18px; /* Slightly larger font for cart quantity */
+}
+
+
+  .setContent{
+    justify-content: center;
+  }
