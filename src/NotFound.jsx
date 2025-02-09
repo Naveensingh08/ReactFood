@@ -13,8 +13,8 @@ function NotFound() {
         })
   return (
     <>
-      <h3>Error</h3>
-      <img src='Notfound.png' style={{width:'600px', height:'400px'}} />
+      
+      <img src='Notfound.png' style={{width:'600px', height:'400px',marginLeft:'400px'}} />
     </>
   )
 }

@@ -55,9 +55,9 @@ const productsSlice=createSlice({
                   image: "rajma.jpg"
                 },
                 {
-                  name: "Kadhi Pakora",
+                  name: "Roti",
                   price: 180,
-                  image: "kadaiPakora.jpg"
+                  image: "roti.jpg"
                 },
                 {
                   name: "Bhindi Masala",
