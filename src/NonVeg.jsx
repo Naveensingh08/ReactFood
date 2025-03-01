@@ -360,7 +360,7 @@ function NonVeg() {
                         <input
                             type="text"
                             className="form-control w-50"
-                            placeholder="Search Non-Vegetables items..."
+                            placeholder="Search Non-Veg items..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
