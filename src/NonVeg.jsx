@@ -162,18 +162,18 @@
 //     let nonVegs = currentItem.map((item, index) => (
 //         <div key={index} className="col-md-3 mb-4">
 //             <div className="card">
-//                 <img
-//                     src={item.image}
-//                     alt="Not found"
-//                     className="card-img-top"
-//                     style={{ height: '200px', objectFit: 'cover' }} // Adjust image height
-//                 />
+                // <img
+                //     src={item.image}
+                //     alt="Not found"
+                //     className="card-img-top"
+                //     style={{ height: '200px', objectFit: 'cover' }} // Adjust image height
+                // />
 //                 <div className="card-body">
 //                     <h5 className="card-title">{item.name}</h5>
 //                     <p className="card-text">₹{item.price}</p>
-//                     <button className="btn btn-primary" onClick={() => dispatch(addToCart(item))}>
-//                         Add to Cart
-//                     </button>
+                    // <button className="btn btn-primary" onClick={() => dispatch(addToCart(item))}>
+                    //     Add to Cart
+                    // </button>
 //                 </div>
 //             </div>
 //         </div>

@@ -1,96 +1,46 @@
-/* import React from 'react'
-
-function Home() {
-  return (
-    <>
-     <h1>WelCome To Our Hotel </h1>
-    </>
-  )
-}
-
-export default Home;
-*/
-
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-
+import { addToCart } from './Store';
 
 function Home() {
+  const vegItems = useSelector(state => state.product.veg).slice(0, 5);
+  const nonVegItems = useSelector(state => state.product.nonVeg).slice(0, 5);
+  const dispatch = useDispatch();
+
+  // Combine and shuffle exactly 5 veg and 5 non-veg items
+  const mixedItems = [...vegItems, ...nonVegItems].sort(() => Math.random() - 0.5);
+
+  const renderCard = (item, index) => (
+    <div className="col-md-4 mb-4" key={index}>
+      <div className="card h-100">
+        <img
+          src={item.image}
+          alt="Not found"
+          className="card-img-top"
+          style={{ height: '200px', objectFit: 'cover' }}
+        />
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title">{item.name}</h5>
+          <p className="card-text">Price: ₹{item.price}</p>
+          <button
+            className="btn btn-success mt-auto"
+            onClick={() => dispatch(addToCart(item))}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="container text-center mt-5">
-      <h1 className="display-4 text-primary">Welcome to Our Food Zone</h1>
-      <p className="lead">Indulge in delicious meals and exciting flavors!</p>
+    <div className="container mt-5">
+      <div className="row">
+        {mixedItems.map((item, index) => renderCard(item, index))}
+      </div>
     </div>
   );
 }
 
 export default Home;
-
-// import { useSelector } from "react-redux"
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// function Home()
-// {
-//   let vegItem=useSelector((state) => state.product.veg);
-//   let nonVegItem=useSelector((state) => state.product.nonVeg);
-
-//   let vegs = vegItem.map((item, index) => (
-//     <div key={index} className="col-md-3 mb-4">
-//         <div className="card">
-//             <img
-//                 src={item.image}
-//                 alt="Not found"
-//                 className="card-img-top"
-//                 style={{ height: '200px', objectFit: 'cover' }} // Adjust image height
-//             />
-//             <div className="card-body">
-//                 <h5 className="card-title">{item.name}</h5>
-//                 <p className="card-text">₹{item.price}</p>
-//                 <button className="btn btn-primary" onClick={() => dispatch(addToCart(item))}>
-//                     Add to Cart
-//                 </button>
-//             </div>
-//         </div>
-//     </div>
-// ));
-
-
-
-//   let nonVegs = nonVegItem.map((item, index) => (
-//           <div key={index} className="col-md-3 mb-4">
-//               <div className="card">
-//                   <img
-//                       src={item.image}
-//                       alt="Not found"
-//                       className="card-img-top"
-//                       style={{ height: '200px', objectFit: 'cover' }} // Adjust image height
-//                   />
-//                   <div className="card-body">
-//                       <h5 className="card-title">{item.name}</h5>
-//                       <p className="card-text">₹{item.price}</p>
-//                       <button className="btn btn-primary" onClick={() => dispatch(addToCart(item))}>
-//                           Add to Cart
-//                       </button>
-//                   </div>
-//               </div>
-//           </div>
-//       ));
-  
-//   return(
-//     <>
-
-// <div className="row">
-//          {vegs}
-//      </div>
-//     <div className="row">
-//          {nonVegs}
-//      </div>
-
-//     </>
-//   )
-// }
-// export default Home;
-
