@@ -59,27 +59,27 @@ function App()
   <div className="collapse navbar-collapse">
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
-        <Link className="nav-link" style={{ color: 'white' }} to="/home">
+        <Link className="nav-link" style={{ color: 'white', fontSize:18}} to="/home">
           <i className="fa-solid fa-house"></i> Home
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" style={{ color: 'white' }} to="/veg">
+        <Link className="nav-link" style={{ color: 'white', fontSize:18 }} to="/veg">
           <i className="fa-solid fa-carrot"></i> Veg
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" style={{ color: 'white' }} to="/nonVeg">
+        <Link className="nav-link" style={{ color: 'white', fontSize:18 }} to="/nonVeg">
           <i className="fa-solid fa-drumstick-bite"></i> NonVeg
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" style={{ color: 'white' }} to="/cart">
+        <Link className="nav-link" style={{ color: 'white', fontSize:18 }} to="/cart">
           <i className="fa-solid fa-cart-shopping"></i> Cart: {totalQuantity}
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" style={{ color: 'white' }} to="/order">Order</Link>
+        <Link className="nav-link" style={{ color: 'white', fontSize:18 }} to="/order">Order</Link>
       </li>
     </ul>
 
